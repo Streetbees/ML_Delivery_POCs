@@ -24,7 +24,7 @@
     "question_name" : null,
     "question_values" : null,
     "from_cluster" : 5,
-    "to_cluster" : null,
+    "to_cluster" : 5,
     "cluster_name" : "Renamed Cluster 5"
   }
 ]

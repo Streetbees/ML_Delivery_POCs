@@ -24,10 +24,12 @@ def define_type_of_editing(cluster_modif:dict, cluster_names:dict, clustering:Cl
         if (cluster_modif['to_cluster'] == clustering.nclusters()):
             print("Creating new cluster...")
             cluster_names[cluster_modif['to_cluster']] = cluster_modif['cluster_name']
-        if (cluster_modif['question_name'] is None):
-            print("No filter applied to this modification...")
         if (cluster_modif['to_cluster'] > clustering.nclusters()):
-            print("Error! The cluster number you assigned is out of scale")
+            raise ValueError("Error! The cluster number you assigned is out of scale")
+        if (cluster_modif['question_name'] is None):
+            print("No filter has been applied to this modification...")
+        else:
+            print("Filter has been applied to this modification")
     return cluster_modif, cluster_names
 
 def format_clustering_modification_dictionary(mod:dict):
