@@ -1,0 +1,30 @@
+[
+  {
+    "question_name" : ["location_name","needs"],
+    "question_values" : [["UK"], ["Prevents illness / strengthens immunity",  "Cleanses my body"]],
+    "from_cluster" : 30,
+    "to_cluster" : 37,
+    "cluster_name" : "No Harmful Ingredients"
+  },
+  {
+    "question_name" : null,
+    "question_values" : null,
+    "from_cluster" : 4,
+    "to_cluster" : 0,
+    "cluster_name" : null
+  },
+  {
+    "question_name" : ["needs"],
+    "question_values" : [["To rehydrate my body"]],
+    "from_cluster" : 11,
+    "to_cluster" : 40,
+    "cluster_name" : "Created new cluster"
+  },
+  {
+    "question_name" : null,
+    "question_values" : null,
+    "from_cluster" : 5,
+    "to_cluster" : null,
+    "cluster_name" : "Renamed Cluster 5"
+  }
+]

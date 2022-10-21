@@ -26,8 +26,8 @@ def define_type_of_editing(cluster_modif:dict, cluster_names:dict, clustering:Cl
             cluster_names[cluster_modif['to_cluster']] = cluster_modif['cluster_name']
         if (cluster_modif['question_name'] is None):
             print("No filter applied to this modification...")
-    if (cluster_modif['to_cluster'] > clustering.nclusters()):
-        print("Error! The cluster number you assigned is out of scale")
+        if (cluster_modif['to_cluster'] > clustering.nclusters()):
+            print("Error! The cluster number you assigned is out of scale")
     return cluster_modif, cluster_names
 
 def format_clustering_modification_dictionary(mod:dict):
@@ -41,7 +41,6 @@ def format_clustering_modification_dictionary(mod:dict):
 
     '''
     d = dict()
-    d['location_name'] = mod['location_name']
     try:
         dict(zip(mod['question_name'], mod['question_values']))
     except:
@@ -61,7 +60,7 @@ def create_clustering_object(input_df:pd.DataFrame, labels_column:str, iv:list, 
     Parameters
     ----------
     input_df: pandas dataframe with the features and the cluster_ids
-    labels_column: clsuter_id
+    labels_column: cluster_id
     iv: the independent variables of clustering
     id_column: usually 'id' or 'submission_id'
 
